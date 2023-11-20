@@ -1,9 +1,8 @@
 'use client';
 import React from 'react';
-import Navbar from '../navigation/navbar';
-import { useState } from 'react';
+import Navbar from '../components/navbar';
+import { useState} from 'react';
 import Image from 'next/image';
-
 
 const products = [
 {
@@ -11,8 +10,9 @@ id: 1,
 name: 'BioFreeze',
 href: '#',
 price: '$48',
-imageSrc: 'https://www.istockphoto.com/photo/concept-of-winter-skin-care-cosmetic-gifts-for-christmas-and-new-year-gm1440573597-480521202?utm_campaign=srp_photos_bottom&utm_content=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fmassage-oil&utm_medium=affiliate&utm_source=unsplash&utm_term=massage+oil%3A%3A%3A',
-imageAlt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
+imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg',
+imageAlt: 'BioFreeze',
+
 },
 {
 id: 2,

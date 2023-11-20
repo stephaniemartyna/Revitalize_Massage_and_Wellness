@@ -1,10 +1,9 @@
-"use client";
+
 import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
-import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from "../images/logo.png";
+import logo from "../img/logo.png";
 
 
 function classNames(...classes) {
@@ -39,7 +38,7 @@ export default function Navbar() {
               >
               <Menu.Items className="absolute left-3 z-10 mt-6 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                 <div className="py-1">
-                  <Link href="/" passHref>
+                  <Link href="../homepage" passHref>
                     <Menu.Item>
                       {({ active }) => (
                         <a
@@ -53,7 +52,7 @@ export default function Navbar() {
                       )}
                     </Menu.Item>
                   </Link>
-                  <Link href="/products" passHref>
+                  <Link href="../products-page" passHref>
                     <Menu.Item>
                       {({ active }) => (
                         <a
@@ -67,7 +66,7 @@ export default function Navbar() {
                       )}
                     </Menu.Item>
                   </Link>
-                  <Link href="/contactus" passHref>
+                  <Link href="../contactus-page" passHref>
                     <Menu.Item>
                       {({ active }) => (
                         <a

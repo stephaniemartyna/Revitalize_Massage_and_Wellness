@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import Navbar from '../navigation/navbar';
+import Navbar from '../components/navbar';
 
 
 export default function ContactUs () {
