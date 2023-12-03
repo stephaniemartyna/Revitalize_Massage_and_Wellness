@@ -22,12 +22,18 @@ const features = [
   },
 ]
 
+const redirectToServices = () => {
+  // Redirect to the contact us page
+  window.location.href = '../pages/services';
+};
+
 export default function Info() {
   return (
-    <div className="bg-white pt-10 pb-10">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+  <div className="flex items-center justify-right pt-20 pb-20">
+
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 ">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl">
             Get back to feeling yourself
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -48,7 +54,14 @@ export default function Info() {
             ))}
           </dl>
         </div>
+
+      <div className="flex items-center justify-center pt-20">
+        <button className="bg-lightgreen text-white py-3 px-10 rounded-lg hover:bg-darkgreen hover:text-white transition duration-200"
+        onClick={redirectToServices}>
+          Our services
+        </button>
       </div>
+    </div>
     </div>
   )
 }

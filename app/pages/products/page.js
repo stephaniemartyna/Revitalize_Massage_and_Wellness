@@ -56,14 +56,21 @@ export default function Products( {}) {
       }
     };
 
+    const redirectToContactUs = () => {
+      // Redirect to the contact us page
+      window.location.href = '../pages/contact';
+    };
+
 return (
     <div className='flex flex-col min-h-screen bg-white'>
     <><>
     <Navbar />
     <div className="bg-white flex-grow justify-items-center">
       <div className="">
-      <div className="mt-20 mx-auto max-w-2xl px-10 py-16 sm:px-6 sm:py-24 lg:max-w-7xl ">
-        <h2 className="">Shop our Products</h2>
+      <div className="mt-20 mx-auto max-w-2xl px-10 py-10 sm:px-6 sm:py-10 lg:max-w-7xl ">
+        <h2 className="text-3xl pb-10 font-bold tracking-tight text-gray-900 sm:text-4xl flex justify-center">
+          Shop Our Products
+        </h2>
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
           {products.map((product) => (
             <div key={product.id} className="group relative">
@@ -95,29 +102,12 @@ return (
                 src={selectedProduct.imageUrl}
                 alt={selectedProduct.imageAlt}
                 className="mb-4 w-full h-48 object-cover object-center" />
-              <p className="text-gray-700 mb-4">{selectedProduct.price}</p>
-              <p className="mb-4">Quantity: {quantity}</p>
+              <p className="text-gray-700 mb-4 text-xl font-semibold mt-10">Price:    {selectedProduct.price}</p>
               <button
-                onClick={() => setQuantity((prev) => Math.max(1, prev - 1))}
-                className="bg-gray-200 px-2 py-1 mr-2"
+              className="bg-lightgreen text-white py-3 px-10 rounded-lg hover:bg-darkgreen hover:text-white transition duration-200"
+              onClick={redirectToContactUs}
               >
-                -
-              </button>
-              <span>{quantity}</span>
-              <button
-                onClick={() => setQuantity((prev) => prev + 1)}
-                className="bg-gray-200 px-2 py-1 ml-2"
-              >
-                +
-              </button>
-              <button
-                onClick={() => {
-                  addToCart();
-                  setSelectedProduct(null);
-                } }
-                className="bg-lightgreen text-white px-4 py-2 mt-4 ml-10 hover:bg-darkgreen"
-              >
-                Add to Cart
+              Contact us to purchase
               </button>
               <button
                 onClick={() => setSelectedProduct(null)}

@@ -21,7 +21,7 @@ export default function ContactUs () {
 
   const closePopup = () => {
     setShowPopup(false);
-    window.location.href = '/';
+    window.location.href = '../pages/home';
   };
 
   return (
