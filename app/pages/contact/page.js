@@ -36,7 +36,7 @@ export default function ContactUs () {
         <div className=" mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Need more information?</h2>
           <p className="mt-2 text-lg leading-8 text-gray-600">
-            Send us a message and we'll get back to you as soon as possible.
+            Send us a message and we will get back to you as soon as possible.
           </p>
         </div>
         <form action="/" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
