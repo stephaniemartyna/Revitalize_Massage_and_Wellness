@@ -12,10 +12,8 @@ export default function ContactUs () {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
     const firstNameValue = document.getElementById('first-name').value;
     setFirstName(firstNameValue);
-
     setShowPopup(true);
   };
 

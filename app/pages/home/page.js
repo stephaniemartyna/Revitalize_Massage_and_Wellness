@@ -3,7 +3,6 @@ import Navbar from '../../components/navbar';
 import Info from '../../components/info';
 import React from 'react';
 import Revitalize from '../../img/marble.jpg';
-import AboutUs from '../../img/aboutus.png';
 import Image from 'next/image';
 import Footer from '../../components/footer';
 
@@ -23,8 +22,6 @@ export default function Home() {
             Massage &amp; Wellness
           </div>
         </div>
-
-
         <Info />
         <Footer />
         </>

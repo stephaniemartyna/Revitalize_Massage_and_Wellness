@@ -27,7 +27,6 @@ const rejuvenationtherapy = [
     '1 Hour Face Sculpting & Buccal Therapy',
 ]
 
-
 export default function Example() {
   return (
     <><Navbar />

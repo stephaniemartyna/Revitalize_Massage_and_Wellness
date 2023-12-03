@@ -23,7 +23,6 @@ const features = [
 ]
 
 const redirectToServices = () => {
-  // Redirect to the contact us page
   window.location.href = '../pages/services';
 };
 

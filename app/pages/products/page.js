@@ -44,20 +44,8 @@ export default function Products( {}) {
         ]
 
  
-    const [selectedProduct, setSelectedProduct] = useState(null);
-    const [quantity, setQuantity] = useState(1);
-    const [cart, setCart] = useState([]);
-  
-    const addToCart = () => {
-      if (selectedProduct) {
-        setCart((prevCart) => [...prevCart, { ...selectedProduct, quantity }]);
-        setSelectedProduct(null);
-        setQuantity(1);
-      }
-    };
-
+    const [selectedProduct, setSelectedProduct] = useState(null);  
     const redirectToContactUs = () => {
-      // Redirect to the contact us page
       window.location.href = '../pages/contact';
     };
 
