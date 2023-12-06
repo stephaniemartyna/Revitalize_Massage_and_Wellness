@@ -30,7 +30,7 @@ export default function Info() {
   return (
   <div className="flex items-center justify-right pt-20 pb-20">
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 ">
+      <div className="mx-auto max-w-7xl py-20 px-20 rounded-3xl lg:px-20 bg-maingrey bg-opacity-25">
         <div className="mx-auto max-w-2xl lg:text-center">
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl">
             Get back to feeling yourself

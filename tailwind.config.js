@@ -23,6 +23,7 @@ module.exports = {
       'beige': '#BDB1A2',
       'black': '#000000',
       'offwhite': '#EDF0EE',
+      'maingrey': '#DCDDDB',
     },
     
     extend: {

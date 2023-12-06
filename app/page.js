@@ -100,7 +100,7 @@ export default function Example() {
 
 
       </header>
-      <div className="relative isolate px-6 pt-20 lg:px-8">
+      <div className="relative isolate px-6 pt-8 lg:px-8">
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
@@ -108,10 +108,10 @@ export default function Example() {
         </div>
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
-            <h1 className="text-6xl tracking-tight text-gray-900 sm:text-6xl [font-family:'Kameron',Helvetica]">
+            <h1 className="[font-family:'Kameron',Helvetica] font-normal text-black text-[100px]">
               Welcome!
             </h1>
-            <h2 className="mt-10 text-2xl tracking-tight text-gray-900 sm:text-3xl [font-family:'Kapakana-Regular',Helvetica,]">
+            <h2 className=" [font-family:'Kapakana-Regular',Helvetica,] text-black text-[40px] font-light">
             Revitalize Massage &amp; Wellness
             </h2>
             <p className="mt-5 pt-10 max-w-prose mx-auto text-xl text-gray-500">
