@@ -4,10 +4,10 @@ const Footer = () => {
   return (
     <footer className="flex flex-col space-y-5 justify-center bg-offwhite pt-5 pb-5">
       <nav className="flex justify-center flex-wrap gap-10 text-darkgreen font-sm">
-        <a className="hover:text-lightgreen" href="/home">Home</a>
-        <a className="pr-5 pl-5 hover:text-lightgreen" href="/products">Products</a>
-        <a className="pr-5 pl-5 hover:text-lightgreen" href="/services">Services</a>
-        <a className="hover:text-lightgreen" href="/contact">Contact Us</a>
+        <a className="text-lg hover:text-lightgreen" href="/home">Home</a>
+        <a className="pr-5 pl-5 text-lg hover:text-lightgreen" href="/products">Products</a>
+        <a className="pr-5 pl-5 text-lg hover:text-lightgreen" href="/services">Services</a>
+        <a className="text-lg hover:text-lightgreen" href="/contact">Contact Us</a>
       </nav>
 
       <div className="flex justify-center space-x-5">

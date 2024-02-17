@@ -23,7 +23,7 @@ export default function Navbar() {
         <div className="flex lg:flex-1 items-center">
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <Image src={Revitalize} alt="Revitalize" className='h-8 w-auto' />
+            <Image src={Revitalize} alt="Revitalize" className='h-10 w-auto' />
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -43,8 +43,8 @@ export default function Navbar() {
             </a>
           ))}
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center">
-          <a href="https://revitalize-pearl.vercel.app/" className="text-base font-semibold leading-7 text-darkgreen hover:text-gray-700">
+        <div className=" hidden lg:flex lg:flex-1 lg:justify-end items-center">
+          <a href="https://revitalize-pearl.vercel.app/" className="text-lg font-semibold leading-7 text-darkgreen hover:text-gray-700">
             Log in
           </a>
         </div>
@@ -82,7 +82,7 @@ export default function Navbar() {
               <div className="py-6">
                 <a
                   href="https://revitalize-pearl.vercel.app/"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-darkgreen hover:bg-gray-50"
+                  className="text-lg -mx-3 block rounded-lg px-3 py-2.5 font-semibold leading-7 text-darkgreen hover:bg-gray-50"
                 >
                   Log in
                 </a>
