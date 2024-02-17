@@ -68,7 +68,7 @@ export default function Example() {
                       </ul>
                   </div>
                   <div className="mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
-                      <div className="bg-white rounded-2xl bg-gray-50 py-5 text-center ring-2 ring-inset ring-lightgreen lg:flex lg:flex-col lg:justify-center lg:py-8">
+                      <div className="bg-white rounded-2xl py-5 text-center ring-2 ring-inset ring-lightgreen lg:flex lg:flex-col lg:justify-center lg:py-8">
                           <div className="mx-auto max-w-xs px-8">
                               <p className="mt-6 flex items-baseline justify-center gap-x-2">
                                   <span className="text-5xl font-bold tracking-tight text-gray-900">$95.00</span>
