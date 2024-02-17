@@ -16,7 +16,6 @@ export default function Home() {
       ];
 
     return (
-        <div  style={{backgroundImage: 'url(${Background})'}}>
         <>
         <Navbar />
         <Carousel slides={slides} />
@@ -25,6 +24,5 @@ export default function Home() {
         <Testimonial />
         <Footer />
         </>
-        </div>
     );
 }
