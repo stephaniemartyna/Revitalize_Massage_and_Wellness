@@ -17,10 +17,10 @@ import {
             <Image src={Theraputic} alt={Card.alt} height={400} width={600} />
           </CardHeader>
           <CardBody>
-            <Typography variant="h5" color="blue-gray" className="mb-2">
+            <Typography variant="h5" color="blue-gray" className="mb-2 text-2xl">
               Theraputic Massage
             </Typography>
-            <Typography>
+            <Typography className="text-lg">
                 Therapeutic massage involves targeted hands-on techniques to alleviate pain, enhance flexibility, and improve overall well-being. Trained therapists customize sessions based on individual needs, providing both physical and mental health benefits, including stress reduction.
             </Typography>
           </CardBody>
@@ -33,10 +33,10 @@ import {
           <Image src={Hotstone} alt={Card.alt} height={300} width={600} />
           </CardHeader>
           <CardBody>
-            <Typography variant="h5" color="blue-gray" className="mb-2">
+            <Typography variant="h5" color="blue-gray" className="mb-2 text-2xl">
               Hot Stone Massage
             </Typography>
-            <Typography>
+            <Typography className="text-lg">
                 Hot stone massage involves placing heated stones on specific points of the body and incorporating them into the massage strokes. The warmth from the stones helps relax muscles, improves circulation, and enhances the overall therapeutic effect of the massage.
             </Typography>
           </CardBody>
@@ -49,10 +49,10 @@ import {
           <Image src={Facial} alt={Card.alt} height={400} width={600} />
           </CardHeader>
           <CardBody>
-            <Typography variant="h5" color="blue-gray" className="mb-2">
+            <Typography variant="h5" color="blue-gray" className="mb-2 text-2xl">
                 Buccal and Facial Massage
             </Typography>
-            <Typography>
+            <Typography className="text-lg">
                 Buccal and facial massage is a specialized technique that focuses on the muscles of the cheeks, jaw, and face to promote relaxation and improve circulation. This form of massage can contribute to facial muscle toning, reduced tension, and a rejuvenated appearance.
             </Typography>
           </CardBody>
