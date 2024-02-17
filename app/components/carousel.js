@@ -25,7 +25,7 @@ const Carousel = ({ slides }) => {
             alt={`Slide ${index + 1}`}
             width={400}
             height={800}
-            className="w-full lg:h-[screen] object-cover"
+            className="w-full lg:h-screen object-cover"
           />
           <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/60">
             <div className="text-center text-white">
