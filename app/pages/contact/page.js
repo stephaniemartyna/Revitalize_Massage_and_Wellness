@@ -3,25 +3,70 @@ import React, { useState } from 'react';
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import Navbar from '../../components/navbar';
 import Footer from '../../components/footer';
+import Map from '../../components/map';
+import FAQ from '../../components/faq';
 
 
 export default function ContactUs () {
 
   const [showPopup, setShowPopup] = useState(false);
   const [firstName, setFirstName] = useState('');
+  const [formValues, setFormValues] = useState({
+    'first-name': '',
+    'last-name': '',
+    'company': '',
+    'email': '',
+    'country': 'CA',
+    'phone-number': '',
+    'message': ''
+  });
 
-  const handleSubmit = (event) => {
+    const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues((prevValues) => ({
+      ...prevValues,
+      [name]: value
+    }));
+  };
+
+  const onSubmit = async (event) => {
     event.preventDefault();
-    const firstNameValue = document.getElementById('first-name').value;
-    setFirstName(firstNameValue);
-    setShowPopup(true);
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "9eae212b-0152-4a3c-9cc6-a10a5a0b8500");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      setFirstName(object['first-name']); 
+      setShowPopup(true);
+      setFormValues({
+        'first-name': '',
+        'last-name': '',
+        'company': '',
+        'email': '',
+        'country': 'CA',
+        'phone-number': '',
+        'message': ''
+      });
+    }
   };
 
   const closePopup = () => {
     setShowPopup(false);
-    window.location.href = '../pages/home';
   };
 
+  
   return (
     <><><div>
       <Navbar />
@@ -31,7 +76,6 @@ export default function ContactUs () {
           className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
           aria-hidden="true"
         >
-
         </div>
         <div className=" mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Need more information?</h2>
@@ -39,7 +83,9 @@ export default function ContactUs () {
             Send us a message and we will get back to you as soon as possible.
           </p>
         </div>
-        <form action="/" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+
+
+        <form onSubmit={onSubmit} className="mx-auto mt-16 max-w-xl sm:mt-20">
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
             <div>
               <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
@@ -51,6 +97,8 @@ export default function ContactUs () {
                   name="first-name"
                   id="first-name"
                   autoComplete="given-name"
+                  value={formValues['first-name']}
+                  onChange={handleInputChange}
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-lightgreen placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-darkgreen sm:text-sm sm:leading-6" />
               </div>
             </div>
@@ -64,6 +112,8 @@ export default function ContactUs () {
                   name="last-name"
                   id="last-name"
                   autoComplete="family-name"
+                  value={formValues['last-name']}
+                  onChange={handleInputChange}
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-lightgreen placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-darkgreen sm:text-sm sm:leading-6" />
               </div>
             </div>
@@ -77,6 +127,8 @@ export default function ContactUs () {
                   name="company"
                   id="company"
                   autoComplete="organization"
+                  value={formValues['company']}
+                  onChange={handleInputChange}
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-lightgreen placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-darkgreen sm:text-sm sm:leading-6" />
               </div>
             </div>
@@ -90,6 +142,8 @@ export default function ContactUs () {
                   name="email"
                   id="email"
                   autoComplete="email"
+                  value={formValues['email']}
+                  onChange={handleInputChange}
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-lightgreen placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-darkgreen sm:text-sm sm:leading-6" />
               </div>
             </div>
@@ -105,10 +159,12 @@ export default function ContactUs () {
                   <select
                     id="country"
                     name="country"
+                    value={formValues['country']}
+                    onChange={handleInputChange}
                     className=" ml-1 rounded-md border-0 bg-transparent bg-none py-1.5 pl-4 pr-9 text-gray-400 sm:text-sm focus:ring-white"
                   >
-                    <option>US</option>
                     <option>CA</option>
+                    <option>US</option>
                     <option>EU</option>
                   </select>
                   <ChevronDownIcon
@@ -120,6 +176,8 @@ export default function ContactUs () {
                   name="phone-number"
                   id="phone-number"
                   autoComplete="tel"
+                  value={formValues['phone-number']}
+                  onChange={handleInputChange}
                   className="block pl-20 w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-lightgreen placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-darkgreen sm:text-sm sm:leading-6" />
               </div>
             </div>
@@ -133,13 +191,13 @@ export default function ContactUs () {
                   id="message"
                   rows={4}
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-lightgreen placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-darkgreen sm:text-sm sm:leading-6"
-                  defaultValue={''} />
+                  value={formValues['message']}
+                  onChange={handleInputChange} />
               </div>
             </div>
           </div>
           <div className="mt-10">
             <button
-              onClick={handleSubmit}
               type="submit"
               className="block w-full rounded-md bg-lightgreen px-5 py-5 text-center text-sm font-semibold text-white hover:bg-darkgreen focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-darkgreen "
             >
@@ -154,7 +212,9 @@ export default function ContactUs () {
                 Thank you, {firstName}, for your message!
               </p>
               <button
-                onClick={closePopup}
+                onClick={() => {
+                  closePopup();
+                }}
                 className="mt-4 px-4 py-2 bg-lightgreen text-white rounded-md hover:bg-darkgreen focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-darkgreen"
               >
                 Close
@@ -163,6 +223,9 @@ export default function ContactUs () {
           </div>
         )}
       </div>
+
+      <Map />
+      <FAQ />
       </><Footer /></>
   );
 }

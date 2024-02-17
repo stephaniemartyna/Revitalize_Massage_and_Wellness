@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+module.exports = withMT({
   plugins: [
     require("daisyui"), 
     require('@tailwindcss/forms'),
@@ -10,6 +12,9 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./*.html", 
+    "./ecommerce/*.html", 
+    "./assets/**/*.js",
   ],
 
   theme: {
@@ -39,8 +44,10 @@ module.exports = {
     },
   },
 
+  
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
+    require("tailgrids/plugin"),
   ],
-}
+});

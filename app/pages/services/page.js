@@ -49,7 +49,7 @@ export default function Example() {
                 </div>
 
               {/* Services box - Massage Therapy */}
-              <div className="bg-white mx-auto mt-10 max-w-xl rounded-3xl ring-2 ring-lightgreen sm:mt-10 lg:mx-0 lg:flex lg:max-w-none">
+              <div className="bg-lightgreen mx-auto mt-10 max-w-xl rounded-3xl ring-2 ring-lightgreen sm:mt-10 lg:mx-0 lg:flex lg:max-w-none">
                   <div className="p-4 sm:p-10 lg:flex-auto">
                       <h3 className="text-3xl font-bold tracking-tight text-black">Massage Therapy - 60 minutes</h3>
                       <div className="mt-10 flex items-center gap-x-4">
@@ -57,11 +57,11 @@ export default function Example() {
                       </div>
                       <ul
                           role="list"
-                          className="mt-8 grid grid-cols-1 gap-4 text-md leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6"
+                          className="mt-8 grid grid-cols-1 gap-4 text-md font-bold leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6"
                       >
                           {massagetherapy.map((feature) => (
                               <li key={feature} className="flex gap-x-3">
-                                  <CheckIcon className="h-6 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                                  <CheckIcon className="h-6 w-5 flex-none text-darkgreen" aria-hidden="true" />
                                   {feature}
                               </li>
                           ))}
@@ -75,9 +75,9 @@ export default function Example() {
                                   <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600"></span>
                               </p>
                               <a
-                                  href="../pages/contact"
+                                  href="https://revitalize-pearl.vercel.app/"
                                   className="mt-10 block w-full rounded-lg bg-lightgreen px-3 py-2 text-center text-sm font-semibold text-white  hover:bg-darkgreen hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-darkgreen"                              >
-                                  Email To Book Appointment
+                                  Login To Book Appointment
                               </a>
                               <p className="mt-6 text-xs leading-5 text-gray-600">
                                   Receipts provided for insurance purposes.
@@ -89,7 +89,7 @@ export default function Example() {
 
 
                 {/* Services box - Face Sculpting */}
-                <div className="bg-white mx-auto mt-10 max-w-xl rounded-3xl ring-2 ring-lightgreen sm:mt-10 lg:mx-0 lg:flex lg:max-w-none">
+                <div className="bg-lightgreen mx-auto mt-10 max-w-xl rounded-3xl ring-2 ring-lightgreen sm:mt-10 lg:mx-0 lg:flex lg:max-w-none">
                   <div className="p-4 sm:p-10 lg:flex-auto">
                       <h3 className="text-3xl font-bold tracking-tight text-black">Face Sculpting & Buccal Therapy - 60 minutes</h3>
                       <div className="mt-10 flex items-center gap-x-4">
@@ -97,11 +97,11 @@ export default function Example() {
                       </div>
                       <ul
                           role="list"
-                          className="mt-8 grid grid-cols-1 gap-4 text-md leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6"
+                          className="mt-8 grid grid-cols-1 gap-4 text-md font-bold leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6"
                       >
                           {facetherapy.map((feature) => (
                               <li key={feature} className="flex gap-x-3">
-                                  <CheckIcon className="h-6 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                                  <CheckIcon className="h-6 w-5 flex-none text-darkgreen" aria-hidden="true" />
                                   {feature}
                               </li>
                           ))}
@@ -115,9 +115,9 @@ export default function Example() {
                                   <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600"></span>
                               </p>
                               <a
-                                  href="../pages/contact"
+                                  href="https://revitalize-pearl.vercel.app/"
                                   className="mt-10 block w-full rounded-lg bg-lightgreen px-3 py-2 text-center text-sm font-semibold text-white  hover:bg-darkgreen hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-darkgreen"                              >
-                                  Email To Book Appointment
+                                  Login To Book Appointment
                               </a>
                               <p className="mt-6 text-xs leading-5 text-gray-600">
                                   Receipts provided for insurance purposes.
@@ -128,7 +128,7 @@ export default function Example() {
               </div>
 
                 {/* Services box - Hot Stone Massage */}
-                <div className="bg-white mx-auto mt-10 max-w-xl rounded-3xl ring-2 ring-lightgreen sm:mt-10 lg:mx-0 lg:flex lg:max-w-none">
+                <div className="bg-lightgreen mx-auto mt-10 max-w-xl rounded-3xl ring-2 ring-lightgreen sm:mt-10 lg:mx-0 lg:flex lg:max-w-none">
                   <div className="p-4 sm:p-10 lg:flex-auto">
                       <h3 className="text-3xl font-bold tracking-tight text-black">Hot Stone Massage - 90 minutes</h3>
                       <div className="mt-10 flex items-center gap-x-4">
@@ -136,11 +136,11 @@ export default function Example() {
                       </div>
                       <ul
                           role="list"
-                          className="mt-8 grid grid-cols-1 gap-4 text-md leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6"
+                          className="mt-8 grid grid-cols-1 gap-4 text-md font-bold leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6"
                       >
                           {hotstonetherapy.map((feature) => (
                               <li key={feature} className="flex gap-x-3">
-                                  <CheckIcon className="h-6 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                                  <CheckIcon className="h-6 w-5 flex-none text-darkgreen" aria-hidden="true" />
                                   {feature}
                               </li>
                           ))}
@@ -154,9 +154,9 @@ export default function Example() {
                                   <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600"></span>
                               </p>
                               <a
-                                  href="../pages/contact"
+                                  href="https://revitalize-pearl.vercel.app/"
                                   className="mt-10 block w-full rounded-lg bg-lightgreen px-3 py-2 text-center text-sm font-semibold text-white  hover:bg-darkgreen hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-darkgreen"                              >
-                                  Email To Book Appointment
+                                  Login To Book Appointment
                               </a>
                               <p className="mt-6 text-xs leading-5 text-gray-600">
                                   Receipts provided for insurance purposes.
@@ -167,7 +167,7 @@ export default function Example() {
               </div>
 
                 {/* Services box - Rejuvenation */}
-                <div className="bg-white mx-auto mt-10 max-w-xl rounded-3xl ring-2 ring-lightgreen sm:mt-10 lg:mx-0 lg:flex lg:max-w-none">
+                <div className="bg-lightgreen mx-auto mt-10 max-w-xl rounded-3xl ring-2 ring-lightgreen sm:mt-10 lg:mx-0 lg:flex lg:max-w-none">
                   <div className="p-4 sm:p-10 lg:flex-auto">
                       <h3 className="text-3xl font-bold tracking-tight text-black">Rejuvenation Treatment - 120 minutes</h3>
                       <div className="mt-10 flex items-center gap-x-4">
@@ -175,11 +175,11 @@ export default function Example() {
                       </div>
                       <ul
                           role="list"
-                          className="mt-8 grid grid-cols-1 gap-4 text-md leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6"
+                          className="mt-8 grid grid-cols-1 gap-4 text-md font-bold leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6"
                       >
                           {rejuvenationtherapy.map((feature) => (
                               <li key={feature} className="flex gap-x-3">
-                                  <CheckIcon className="h-6 w-5 flex-none text-indigo-600" aria-hidden="true" />
+                                  <CheckIcon className="h-6 w-5 flex-none text-darkgreen" aria-hidden="true" />
                                   {feature}
                               </li>
                           ))}
@@ -193,10 +193,10 @@ export default function Example() {
                                   <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600"></span>
                               </p>
                               <a
-                                  href="../pages/contact"
+                                  href="https://revitalize-pearl.vercel.app/"
                                   className="mt-10 block w-full rounded-lg bg-lightgreen px-3 py-2 text-center text-sm font-semibold text-white  hover:bg-darkgreen hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-darkgreen"
                               >
-                                  Email To Book Appointment
+                                  Login To Book Appointment
                               </a>
                               <p className="mt-6 text-xs leading-5 text-gray-600">
                                   Receipts provided for insurance purposes.
