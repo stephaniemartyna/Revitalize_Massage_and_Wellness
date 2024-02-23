@@ -24,12 +24,12 @@ export function Testimonial() {
 
   return (
     <>
-      <section className="pb-20 sm:pt-10 dark:bg-dark lg:pb-[120px] lg:pt-20">
-        <div className="container mx-auto">
+      <section className="pb-20 sm:pt-10 dark:bg-dark lg:pb-[120px] lg:pt-20 sm:text-center">
+        <div className="container">
             <h3 className="mb-10 font-bold leading-[1.13] text-center text-darkgreen dark:text-white sm:text-3xl">
               What Our Clients Say
             </h3>
-
+        </div>
           <Swiper slidesPerView={1} ref={sliderRef}>
             <SwiperSlide>
               <SingleTestimonial
@@ -84,7 +84,6 @@ export function Testimonial() {
               </div>
             </div>
           </Swiper>
-        </div>
       </section>
     </>
   );
@@ -103,7 +102,7 @@ const SingleTestimonial = ({
     <div className="relative flex justify-center">
       <div className="relative w-full pb-16 md:w-11/12 lg:w-10/12 xl:w-8/12">
         <div className="w-full items-center md:flex">
-          <div className="relative mb-12 w-full max-w-[310px] md:mb-0 md:mr-12 md:max-w-[250px] lg:mr-14 lg:max-w-[280px] 2xl:mr-16">
+          <div className="relative mb-12 w-full max-w-[310px] md:mb-0 md:mr-12 md:max-w-[250px] lg:mr-14 lg:max-w-[280px] 2xl:mr-16 sm:mx-auto">
             <Image src= {image} alt={"image"} width={300} height={200} />
             <span className="absolute -left-6 -top-6 z-[-1] sm:hidden">
               <DotShape />
