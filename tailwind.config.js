@@ -19,16 +19,18 @@ module.exports = withMT({
 
   theme: {
     colors: {
-      'darkgreen': '#2D4635', 
+      'darkgreen': '#9DAAFF', 
       'white': '#ffffff',
       'medgreen': '#779790',
-      'lightgreen': '#A1BCB7',
+      'lightgreen': '#009B94',
       'lightgrey': '#B3B3B3',
       'darkgrey': '#4B4B4B',
       'beige': '#BDB1A2',
       'black': '#000000',
       'offwhite': '#EDF0EE',
       'maingrey': '#DCDDDB',
+      'maingreen': '#009B94',
+      'accent': "#9DAAFF",
     },
     
     extend: {

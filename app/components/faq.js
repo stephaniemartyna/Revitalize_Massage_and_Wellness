@@ -30,13 +30,13 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="justify-center pb-20">
+    <div className="justify-center mb-20 ">
       <p className="text-3xl font-semibold text-center text-gray-800 mb-10">
         Frequently Asked Questions
       </p>
       {faqData.map((item) => (
         <Accordion key={item.id} open={open === item.id} className="pl-20 pr-20">
-          <AccordionHeader onClick={() => handleOpen(item.id)}>{item.question}</AccordionHeader>
+          <AccordionHeader className="text-center justify-items-center" onClick={() => handleOpen(item.id)}>{item.question}</AccordionHeader>
           <AccordionBody className="text-md">{item.answer}</AccordionBody>
         </Accordion>
       ))}

@@ -13,6 +13,8 @@ const navigation = [
 ];
 
 export default function Navbar() {
+
+  
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const closeMobileMenu = () => setMobileMenuOpen(false);
@@ -44,7 +46,7 @@ export default function Navbar() {
           ))}
         </div>
         <div className=" hidden lg:flex lg:flex-1 lg:justify-end items-center">
-          <a href="https://revitalize-pearl.vercel.app/" className="text-lg font-semibold leading-7 text-darkgreen hover:text-gray-700">
+          <a href="https://revitalize-pearl.vercel.app/" className="text-lg font-semibold leading-7 shadow-2 border-lightgrey-2 border-2 text-maingreen hover:text-gray-700 rounded-md py-1 px-3">
             Log in
           </a>
         </div>

@@ -6,9 +6,9 @@ export default function Map() {
             <div className="gmap_canvas pb-20">
                 <iframe
                     width="100%"
-                    height="403"
+                    height="603"
                     id="gmap_canvas"
-                    frameborder="0"
+                    frameBorder="0"
                     src="https://maps.google.com/maps?width=523&amp;height=403&amp;hl=en&amp;q=%20Heritage%20Pointe+(Revitalize%20Massage%20and%20Wellness)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                 ></iframe>
             </div>
